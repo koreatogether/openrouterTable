@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OpenRouter coding model benchmark tables" />
+    <title>OpenRouter Coding Model Table</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="comfort">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="OpenRouter model table home">OpenRouter Coding Models</a>
+      <div class="theme-picker" aria-label="색상 모드 선택">
+        <button type="button" data-theme-option="light">흰색</button>
+        <button type="button" data-theme-option="dark">검정</button>
+        <button type="button" data-theme-option="comfort">추천</button>
+        <button type="button" data-theme-option="colorblind">색맹</button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Updated <time datetime="2026-05-03">2026-05-03</time></p>
+          <h1 id="page-title">OpenRouter 코딩 모델 비교표</h1>
+        </div>
+        <strong class="notice">
+          AI로 작성된 조사 데이터입니다. 실제 사용 전 OpenRouter와 각 벤치마크 원문에서 가격, 점수, 모델명을 최종 확인하세요.
+        </strong>
+      </section>
+
+      <section class="controls" aria-label="표 선택과 필터">
+        <div class="tabs" role="tablist" aria-label="리포트 선택">
+          <button type="button" id="tab-v2" role="tab" aria-selected="true" aria-controls="panel">V2 Coding Index</button>
+          <button type="button" id="tab-v1" role="tab" aria-selected="false" aria-controls="panel">V1 SWE-bench</button>
+        </div>
+        <label class="search">
+          <span>검색</span>
+          <input id="search" type="search" placeholder="model, provider, id" autocomplete="off" />
+        </label>
+      </section>
+
+      <section id="panel" class="panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-v2">
+        <div class="summary" id="summary"></div>
+        <div class="table-wrap">
+          <table id="model-table">
+            <thead id="table-head"></thead>
+            <tbody id="table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="recommendations" aria-labelledby="recommend-title">
+        <div class="section-title">
+          <h2 id="recommend-title">가성비 추천</h2>
+          <span id="recommend-subtitle"></span>
+        </div>
+        <div class="cards" id="recommendations"></div>
+      </section>
+
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">Sources</h2>
+        <div id="sources"></div>
+      </section>
+    </main>
+
+    <script src="./build/main.js" defer></script>
+  </body>
+</html>
